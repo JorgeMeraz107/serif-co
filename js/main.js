@@ -471,3 +471,47 @@ function setupContactAnimations() {
 }
 
 setTimeout(setupContactAnimations, 600);
+
+/* ================
+   HIRE MODAL LOGIC
+   ================ */
+
+const btnHire = document.getElementById('btn-hire');
+const hireModal = document.getElementById('hire-modal');
+const hireClose = document.querySelector('.hire-close');
+const hireBg = document.querySelector('.hire-modal-bg');
+const hireContent = document.querySelector('.hire-modal-content');
+
+if (btnHire && hireModal) {
+  const openModal = (e) => {
+    e.preventDefault();
+    hireModal.classList.remove('hidden');
+    
+    // Animation
+    gsap.fromTo(hireBg, { opacity: 0 }, { opacity: 1, duration: 0.4 });
+    gsap.fromTo(hireContent, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay: 0.1 });
+  };
+
+  const closeModal = () => {
+    gsap.to(hireBg, { opacity: 0, duration: 0.4 });
+    gsap.to(hireContent, { opacity: 0, y: 30, duration: 0.4, ease: 'power2.in', onComplete: () => {
+      hireModal.classList.add('hidden');
+    }});
+  };
+
+  btnHire.addEventListener('click', openModal);
+  hireClose.addEventListener('click', closeModal);
+  hireBg.addEventListener('click', closeModal);
+
+  // Add custom cursor listeners for modal elements
+  document.querySelectorAll('#hire-modal button, #hire-modal input, #hire-modal select, #hire-modal textarea, .hire-close').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.classList.add('expanded');
+      follower.classList.add('expanded');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove('expanded');
+      follower.classList.remove('expanded');
+    });
+  });
+}
