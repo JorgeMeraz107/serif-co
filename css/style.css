@@ -225,7 +225,7 @@ body {
 .nav-link {
   position: relative;
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -408,7 +408,7 @@ section {
 
 .hero-sub {
   font-family: var(--font-body);
-  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 200;
   color: var(--ink-light);
   line-height: 1.8;
@@ -425,7 +425,7 @@ section {
 
 .cta-link {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--ink);
@@ -558,7 +558,7 @@ section {
 
 .project-type {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--warm-gray);
@@ -628,7 +628,7 @@ section {
 
 .service-content p {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 200;
   color: var(--warm-gray);
   max-width: 420px;
@@ -725,7 +725,7 @@ section {
 
 .nosotros-lead {
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: 300;
   line-height: 1.7;
   margin-bottom: 1.8rem;
@@ -733,7 +733,7 @@ section {
 }
 
 .nosotros-text p {
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   font-weight: 200;
   color: var(--ink-light);
   line-height: 1.85;
@@ -745,7 +745,7 @@ section {
   align-items: center;
   gap: 1rem;
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream);
@@ -813,7 +813,7 @@ section {
 
 .contact-tagline {
   font-family: var(--font-body);
-  font-size: clamp(0.88rem, 1.5vw, 1.05rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 200;
   color: var(--ink-light);
   line-height: 1.85;
@@ -838,7 +838,7 @@ section {
 
 .btn-hire-text {
   font-family: var(--font-body);
-  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   font-weight: 300;
   letter-spacing: 0.35em;
   text-transform: uppercase;
