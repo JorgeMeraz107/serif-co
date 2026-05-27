@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serif & Co. — Agencia Creativa</title>
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  <link href="https://fonts.cdnfonts.com/css/egmond" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/edmundsbury-serif" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- INTRO SCREEN -->
+  <div id="intro">
+    <!-- Logo en intro screen -->
+    <img src="img/Logo.png" alt="Serif & Co." class="intro-logo" />
+    <div id="intro-text">
+      <span class="intro-line">Impulsando pequeños negocios</span>
+      <span class="intro-line">con creatividad, identidad</span>
+      <span class="intro-line intro-italic">y visión.</span>
+    </div>
+    <div id="intro-skip">Continuar</div>
+  </div>
+
+  <!-- MAIN SITE -->
+  <div id="site" class="hidden">
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <!-- logo black.png → navbar (fondo beige/claro) -->
+      <a href="#" class="nav-logo">
+        <img src="img/Logo.png" alt="Serif & Co." class="nav-logo-img" />
+      </a>
+      <div class="nav-links">
+        <a href="#proyectos" class="nav-link"><span>Portafolio</span></a>
+        <a href="#nosotros" class="nav-link"><span>Nosotros</span></a>
+        <a href="#contacto" class="nav-link"><span>Contacto</span></a>
+        <a href="#blog" class="nav-link"><span>Blog</span></a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu">
+      <img src="img/Logo.png" alt="Serif & Co." class="mobile-menu-logo" />
+      <a href="#proyectos" class="mobile-link">Portafolio</a>
+      <a href="#nosotros" class="mobile-link">Nosotros</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+      <a href="#blog" class="mobile-link">Blog</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+
+      <!-- LADO IZQUIERDO: texto -->
+      <div class="hero-inner">
+        <div class="hero-eyebrow">Agencia Creativa · San Pedro Sula</div>
+        <h1 class="hero-heading">
+          <span class="h-line">Diseño que</span>
+          <span class="h-line h-italic">transforma</span>
+          <span class="h-line">negocios.</span>
+        </h1>
+        <div class="hero-sub">
+          Identidad visual, fotografía y estrategia creativa<br>para marcas que quieren crecer.
+        </div>
+        <div class="hero-cta">
+          <a href="#proyectos" class="cta-link">Ver proyectos <span class="cta-arrow">→</span></a>
+        </div>
+        <!-- Scroll hint reposicionado abajo del CTA -->
+        <div class="hero-scroll-hint">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </div>
+
+      <!-- LADO DERECHO: composición editorial -->
+      <div class="hero-visual">
+
+        <!-- Stack de imágenes de proyectos — composición asimétrica -->
+        <div class="hero-stack">
+
+          <!-- Imagen principal: portafolio (tarjetas 3D) -->
+          <div class="hero-stack-main reveal-hero">
+            <img src="img/portafolio.png" alt="Portafolio Serif & Co." />
+          </div>
+
+          <!-- Imagen secundaria: Shekinah — superpuesta abajo derecha -->
+          <div class="hero-stack-secondary reveal-hero">
+            <img src="img/shekinah salon de belleza.jpeg" alt="Shekinah Salon" />
+          </div>
+
+          <!-- Etiqueta de proyecto — tipografía pura, sin dots ni badges -->
+          <div class="hero-stack-label reveal-hero">
+            <span class="hero-stack-num">02</span>
+            <span class="hero-stack-name">Proyectos activos</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>Diseño Gráfico</span>
+        <span class="dot">·</span>
+        <span>Fotografía</span>
+        <span class="dot">·</span>
+        <span>Branding</span>
+        <span class="dot">·</span>
+        <span>Redes Sociales</span>
+        <span class="dot">·</span>
+        <span>Publicidad Visual</span>
+        <span class="dot">·</span>
+        <span>Identidad de Marca</span>
+        <span class="dot">·</span>
+        <span>Diseño Gráfico</span>
+        <span class="dot">·</span>
+        <span>Fotografía</span>
+        <span class="dot">·</span>
+        <span>Branding</span>
+        <span class="dot">·</span>
+        <span>Redes Sociales</span>
+        <span class="dot">·</span>
+        <span>Publicidad Visual</span>
+        <span class="dot">·</span>
+        <span>Identidad de Marca</span>
+        <span class="dot">·</span>
+      </div>
+    </div>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos">
+      <div class="section-header">
+        <div class="section-label">02 — Portafolio</div>
+        <h2 class="section-title">Nuestros<br><em>Proyectos</em></h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- portafolio.png → imagen de portafolio (tarjetas de presentación con logo) -->
+        <div class="project-item" data-index="01">
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: #f0f0f0;">
+              <img src="img/portafolio.png" alt="Multiservicios RD" class="project-real-img" />
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-num">01</span>
+            <div>
+              <h3 class="project-name">Multiservicios RD</h3>
+              <p class="project-type">Branding · Identidad Visual</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- shekinah salon de belleza.jpeg → proyecto 2: Salon Shekinah -->
+        <div class="project-item" data-index="02">
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: #2d1040;">
+              <img src="img/shekinah salon de belleza.jpeg" alt="Salon Shekinah" class="project-real-img" />
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-num">02</span>
+            <div>
+              <h3 class="project-name">Salon Shekinah</h3>
+              <p class="project-type">Fotografía · Redes Sociales</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <div class="section-header">
+        <div class="section-label">03 — Servicios</div>
+        <h2 class="section-title">Lo que<br><em>hacemos</em></h2>
+      </div>
+
+      <div class="services-list">
+        <div class="service-row">
+          <div class="service-num">01</div>
+          <div class="service-content">
+            <h3>Desarrollo de Marca</h3>
+            <p>Creamos y fortalecemos la identidad visual de tu negocio.</p>
+          </div>
+          <div class="service-tag">Branding</div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">02</div>
+          <div class="service-content">
+            <h3>Fotografía Profesional</h3>
+            <p>Realizamos fotografías comerciales y contenido visual atractivo.</p>
+          </div>
+          <div class="service-tag">Fotografía</div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">03</div>
+          <div class="service-content">
+            <h3>Diseño para Redes Sociales</h3>
+            <p>Diseñamos contenido creativo y profesional para redes sociales.</p>
+          </div>
+          <div class="service-tag">Social</div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">04</div>
+          <div class="service-content">
+            <h3>Publicidad Visual</h3>
+            <p>Creamos promociones y campañas visuales que conectan con clientes.</p>
+          </div>
+          <div class="service-tag">Publicidad</div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">05</div>
+          <div class="service-content">
+            <h3>Asesoramiento Creativo</h3>
+            <p>Brindamos ideas y estrategias para mejorar la imagen de tu marca.</p>
+          </div>
+          <div class="service-tag">Estrategia</div>
+        </div>
+        <div class="service-row">
+          <div class="service-num">06</div>
+          <div class="service-content">
+            <h3>Branding y Manual de Marca</h3>
+            <p>Desarrollamos lineamientos visuales para mantener una identidad coherente.</p>
+          </div>
+          <div class="service-tag">Manual</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+      <div class="nosotros-inner">
+        <div class="nosotros-left">
+          <div class="section-label">04 — Nosotros</div>
+          <h2 class="section-title">¿Quiénes<br><em>Somos?</em></h2>
+          <!-- nosotros.png → imagen de identidad de marca de la agencia -->
+          <div class="nosotros-video">
+            <video class="nosotros-video-el" src="img/video de la pestaña de nosotros.mp4" poster="img/nosotros.png"
+              controls playsinline preload="metadata"></video>
+          </div>
+        </div>
+        <div class="nosotros-right">
+          <div class="nosotros-text">
+            <p class="nosotros-lead">Serif & Co. es una agencia creativa y publicitaria desarrollada por estudiantes de
+              Diseño Gráfico del Instituto Internacional Tecnológico (INTEC), enfocada en fortalecer la imagen visual y
+              el crecimiento de pequeños negocios.</p>
+            <p>Nuestro equipo, compuesto por jóvenes creativos y apasionados, trabaja en diseño gráfico, fotografía,
+              publicidad y asesoramiento visual para crear marcas más profesionales, atractivas y memorables.</p>
+            <p>Nos enfocamos en desarrollar propuestas innovadoras y estratégicas que ayuden a cada negocio a destacar y
+              conectar mejor con sus clientes.</p>
+          </div>
+          <a href="#contacto" class="btn-contact">
+            <span class="btn-text">Contáctanos</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+
+      <!-- contacto.jpg → imagen de fondo/header de la sección contacto (mujer con laptop) -->
+      <div class="contacto-hero-img">
+        <img src="img/contacto.jpg.jpeg" alt="Trabajemos juntos" />
+      </div>
+
+      <!-- Encabezado superior -->
+      <div class="contacto-top">
+        <div class="section-label">05 — Contacto</div>
+        <h2 class="contact-welcome">¡Bienvenido!</h2>
+        <p class="contact-tagline">Trabajemos juntos para crear experiencias que cambien las<br class="hide-mobile">
+          reglas del juego y que logren el repunte de tu marca.</p>
+      </div>
+
+      <!-- Botón principal -->
+      <div class="contacto-cta-wrap">
+        <a href="mailto:hola@serifco.com" class="btn-hire" id="btn-hire">
+          <span class="btn-hire-text">CONTRÁTANOS</span>
+          <span class="btn-hire-ring"></span>
+        </a>
+      </div>
+
+      <!-- Separador -->
+      <div class="contacto-divider"></div>
+
+      <!-- Info dividida -->
+      <div class="contacto-info">
+        <div class="contacto-col">
+          <div class="contacto-col-label">Contacto</div>
+          <a href="tel:89066738" class="contacto-item">8906-6738</a>
+          <a href="tel:93967706" class="contacto-item">9396-7706</a>
+        </div>
+
+        <div class="contacto-center-line"></div>
+
+        <div class="contacto-col contacto-col-right">
+          <div class="contacto-col-label">Dirección</div>
+          <a href="https://maps.app.goo.gl/7iJg5APGN8dMfXvx6" target="_blank" rel="noopener" class="contacto-item">Entre
+            5 y 6 calle, 3 Avenida NO</a>
+          <a href="https://maps.app.goo.gl/7iJg5APGN8dMfXvx6" target="_blank" rel="noopener" class="contacto-item">San
+            Pedro Sula, Cortés</a>
+          <a href="https://maps.app.goo.gl/7iJg5APGN8dMfXvx6" target="_blank" rel="noopener"
+            class="contacto-map-link">Ver en Google Maps →</a>
+        </div>
+      </div>
+
+      <!-- Mapa embed -->
+      <div class="contacto-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.3!2d-88.0306!3d15.5039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDMwJzE0LjAiTiA4OMKwMDEnNTAuMiJX!5e0!3m2!1ses!2shv!4v1699999999999!5m2!1ses!2shv"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Ubicación Serif & Co.">
+        </iframe>
+        <div class="map-overlay">
+          <a href="https://maps.app.goo.gl/7iJg5APGN8dMfXvx6" target="_blank" rel="noopener" class="map-open-link">
+            Abrir en Maps →
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- BLOG PLACEHOLDER -->
+    <section id="blog">
+      <div class="section-header">
+        <div class="section-label">06 — Blog</div>
+        <h2 class="section-title">Ideas &<br><em>Reflexiones</em></h2>
+      </div>
+      <div class="blog-coming">
+        <p>Próximamente — historias sobre diseño, identidad y creatividad.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-inner">
+
+        <div class="footer-top">
+          <!-- Logo imagen en footer -->
+          <a href="#" class="footer-brand-link">
+            <img src="img/Logo.png" alt="Serif & Co." class="footer-logo-img" />
+          </a>
+          <div class="footer-tagline">Agencia de Diseño y Publicidad</div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-mid">
+          <div class="footer-social-label">Síguenos</div>
+          <div class="footer-socials">
+            <a href="https://instagram.com/serif_and_co" target="_blank" rel="noopener" class="footer-social-link">
+              <span class="social-platform">IG</span>
+              <span class="social-handle">serif_and_co</span>
+            </a>
+            <a href="https://facebook.com/serifandco" target="_blank" rel="noopener" class="footer-social-link">
+              <span class="social-platform">FB</span>
+              <span class="social-handle">Serif & Co.</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2025 Serif & Co. Todos los derechos reservados.</div>
+          <div class="footer-credits">Hecho con intención · INTEC · San Pedro Sula</div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE -->
+    <a href="#contacto" class="fab-pencil" id="fab-pencil" aria-label="Ir a contacto">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </svg>
+    </a>
+
+  </div><!-- end #site -->
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
